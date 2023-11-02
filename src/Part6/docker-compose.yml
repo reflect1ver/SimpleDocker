@@ -1,0 +1,12 @@
+version: "3"
+services:
+  server:
+   build: ../Part4
+   ports: 
+     - 81:80
+   container_name: p5_server
+  proxy:
+   build: ./proxy/
+   container_name: p6_proxy
+   ports:
+     - 80:8080
